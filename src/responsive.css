@@ -1,0 +1,162 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .app > main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 70px 16px 28px;
+  }
+
+  .stats {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .stat {
+    min-width: 0;
+    min-height: 64px;
+    padding: 12px 10px;
+  }
+
+  .stat b,
+  .stat small {
+    white-space: normal;
+  }
+
+  .dashboardGrid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboardGrid > .panel,
+  .panel.all {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: 16px 14px;
+  }
+
+  .dashboardGrid > .panel:first-child .empty {
+    padding: 28px 16px;
+  }
+
+  .list,
+  .item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .item {
+    display: grid !important;
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    align-items: start !important;
+    gap: 10px 11px !important;
+    padding: 13px 0 !important;
+  }
+
+  .deadline {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 44px !important;
+    height: 46px !important;
+    margin: 0;
+  }
+
+  .itemMain {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .itemTop,
+  .itemMain h3,
+  .itemMain p,
+  .itemMain .meta {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .actions {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    gap: 6px !important;
+  }
+
+  .actions button,
+  .actions .statusButton {
+    width: auto !important;
+    min-width: 0;
+    min-height: 40px !important;
+    flex: 0 1 auto;
+    padding: 8px 11px;
+  }
+
+  .actions .statusButton {
+    min-width: 92px;
+  }
+
+  .empty {
+    padding: 28px 16px;
+  }
+
+  .panelHead h2 {
+    font-size: clamp(16px, 4.5vw, 19px);
+  }
+
+  .item h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 374px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 10px 8px;
+  }
+
+  .stat b {
+    font-size: 18px;
+  }
+
+  .stat small {
+    font-size: 9px;
+  }
+
+  .actions button,
+  .actions .statusButton {
+    min-height: 40px !important;
+    padding-inline: 9px;
+  }
+
+  .actions .statusButton {
+    min-width: 88px;
+  }
+}
