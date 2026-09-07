@@ -35,3 +35,4 @@ This starter records the selected file names and metadata in browser storage, bu
 npm run build
 # Academic-Activity-Manager-by-Christian
 # academicmanagerbychristian
+# academicmanagerbychristian
